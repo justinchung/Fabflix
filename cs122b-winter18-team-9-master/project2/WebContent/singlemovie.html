@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html style=" 
+  background: url(http://tdslasalle.org/cp-admin/wp-content/uploads/2013/01/rev-slide-1-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+">
+<head>
+<meta charset="UTF-8">
+<title>Fabflix</title>
+</head>
+<body>
+	<a href="search.html">Search</a>
+	<a href="browse.html">Browse</a>
+	<input type="submit" id="checkout_button" value="Checkout" onclick=handleCheckoutRedirect()>
+	<input type="button" id="add_to_cart_button" value="Add to cart" onclick=event.preventDefault onclick=handleAtcClick()>
+	<input type="submit" id="logout_button" value="Logout" onclick=handleLogout()>
+
+	<table id=single_movie_table>
+		<thead>
+			<tr>
+				<th>ID<th>
+				<th>Title</th>
+				<th>Year</th>
+				<th>Director</th>
+				<th>Genres</th>
+				<th>Actors</th>
+			</tr>
+		</thead>
+		<tbody id=single_movie_table_body>
+		</tbody>
+	</table>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="./singlemovie.js"></script>
+	<script src="./checkout.js"></script>
+	<script src="./addtocart.js"></script>
+	<script src="./logout.js"></script>
+	
+</body>
+</html>

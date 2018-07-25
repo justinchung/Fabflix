@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html style=" 
+  background: url(http://tdslasalle.org/cp-admin/wp-content/uploads/2013/01/rev-slide-1-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+">
+<head>
+<meta charset="UTF-8">
+<title>Fabflix</title>
+</head>
+<body>
+	FABFLIX
+	<input type="submit" id="checkout_button" value="Checkout" onclick=handleCheckoutRedirect()>
+	<input type="submit" id="logout_button" value="Logout" onclick=handleLogout()>
+
+	<h1 style = "padding: 25px; text-align: center;">Browse by Title</h1>
+	<select id="titledrop" style = "text-align: center; margin-left: 47%;">
+	<option value="" disabled selected>Select a Letter</option>
+	<option value="a">A</option>
+	<option value="b">B</option>
+	<option value="c">C</option>
+	<option value="d">D</option>
+	<option value="e">E</option>
+	<option value="f">F</option>
+	<option value="g">G</option>
+	<option value="h">H</option>
+	<option value="i">I</option>
+	<option value="j">J</option>
+	<option value="k">K</option>
+	<option value="l">L</option>
+	<option value="m">M</option>
+	<option value="n">N</option>
+	<option value="o">O</option>
+	<option value="p">P</option>
+	<option value="q">Q</option>
+	<option value="r">R</option>
+	<option value="s">S</option>
+	<option value="t">T</option>
+	<option value="u">U</option>
+	<option value="v">V</option>
+	<option value="w">W</option>
+	<option value="x">X</option>
+	<option value="y">Y</option>
+	<option value="z">Z</option>
+	<option value="1">#</option>
+	</select>
+	
+	<input type="submit" id="submit_browse_title" value="Browse" onclick=handleBrowseTitleRedirect()>
+	
+	<h1 style = "padding: 25px; text-align: center;">Browse by Genre</h1>
+	<select id="genredrop" style = "text-align: center; margin-left: 47%;">
+	<option value="" disabled selected>Select a Genre</option>
+	<option value="action">Action</option>
+	<option value="adult">Adult</option>
+	<option value="adventure">Adventure</option>
+	<option value="animation">Animation</option>
+	<option value="biography">Biography</option>
+	<option value="comedy">Comedy</option>
+	<option value="crime">Crime</option>
+	<option value="documentary">Documentary</option>
+	<option value="drama">Drama</option>
+	<option value="family">Family</option>
+	<option value="fantasy">Fantasy</option>
+	<option value="history">History</option>
+	<option value="horror">Horror</option>
+	<option value="music">Music</option>
+	<option value="musical">Musical</option>
+	<option value="mystery">Mystery</option>
+	<option value="reality-tv">Reality-TV</option>
+	<option value="romance">Romance</option>
+	<option value="sci-fi">Sci-Fi</option>
+	<option value="sport">Sport</option>
+	<option value="thriller">Thriller</option>
+	<option value="war">War</option>
+	<option value="western">Western</option>
+	</select>
+	
+	<input type="submit" id="submit_browse_genre" value="Browse" onclick=handleBrowseGenreRedirect()>
+	
+	<!-- include jQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!--  include our own js file -->
+	<script src="./browse.js"></script>
+	<script src="./checkout.js"></script>
+	<script src="./logout.js"></script>
+</body>
+</html>

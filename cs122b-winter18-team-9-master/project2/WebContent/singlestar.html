@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html style=" 
+  background: url(http://tdslasalle.org/cp-admin/wp-content/uploads/2013/01/rev-slide-1-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+">
+<head>
+<meta charset="UTF-8">
+<title>Single Star</title>
+</head>
+<body>
+	<a href="search.html">Search</a>
+	<a href="browse.html">Browse</a>
+	<input type="submit" id="checkout_button" value="Checkout" onclick=handleCheckoutRedirect()>
+	<input type="submit" id="logout_button" value="Logout" onclick=handleLogout()>
+	
+	<table id=single_star_table>
+		<thead>
+			<tr>
+				<th>Name<th>
+				<th>DOB</th>
+				<th>Movies</th>
+			</tr>
+		</thead>
+		<tbody id=single_star_table_body>
+		</tbody>
+	</table>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="./singlestar.js"></script>
+	<script src="./checkout.js"></script>
+	<script src="./logout.js"></script>
+</body>
+</html>

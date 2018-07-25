@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html style=" 
+  background: url(http://tdslasalle.org/cp-admin/wp-content/uploads/2013/01/rev-slide-1-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+">
+<head>
+<meta charset="UTF-8">
+<title>Fablix</title>
+
+	
+</head>
+<body>
+	<h1 align="center">Welcome to Fablix!</h1>
+	<br>
+	<a href="search.html">Search</a>
+	<a href="browse.html">Browse</a>
+	<input type="submit" id="logout_button" value="Logout" onclick=handleLogout()>
+	
+	<input type="submit" id="checkout_button" value="Checkout" onclick=handleCheckoutRedirect()>
+	
+  	<input id="search_bar" type="text" placeholder="Search..">
+	
+	<!--  include jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- include jquery autocomplete JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.7/jquery.autocomplete.min.js"></script>
+
+	<script src="./checkout.js"></script>
+	<script src="./logout.js"></script>
+	<script src="./searchbar.js"></script>
+</body>
+</html>

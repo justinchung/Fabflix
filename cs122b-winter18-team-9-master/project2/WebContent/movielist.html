@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html style=" 
+  background: url(http://tdslasalle.org/cp-admin/wp-content/uploads/2013/01/rev-slide-1-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+">
+<head>
+<meta charset="UTF-8">
+<title>Fabflix</title>
+</head>
+<body>
+	<a href="index.html">Home</a>
+	<a href="search.html">Search</a>
+	<a href="browse.html">Browse</a>
+	<input type="submit" id="logout_button" value="Logout" onclick=handleLogout()>
+	
+	<input type="submit" id="checkout_button" value="Checkout" onclick=handleCheckoutRedirect()>
+	<h1 align="center">Movie List</h1>
+	
+	<div class="dropdown">
+		<button onclick=myFunction() class="dropbtn">10</button>
+  		<div id="myDropdown" class="dropdown-content">
+    		<a href="#">10</a>
+    		<a href="#">25</a>
+    		<a href="#">50</a>
+    		<a href="#">100</a>
+  		</div>
+	</div>
+	
+	<table id=movielist_table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th onclick=sortTable(1)>Title</th>
+				<th onclick=sortTable(2)>Year</th>
+				<th>Director</th>
+				<th>Genre</th>
+				<th>Actors</th>
+			</tr>
+		</thead>
+		<tbody id="movielist_table_body">
+		</tbody>
+		
+	
+		
+	</table>
+	<table id="page_button_table">
+	
+	
+	</table>
+	
+	
+	
+	<script>
+	/* When the user clicks on the button, 
+	toggle between hiding and showing the dropdown content */
+	function myFunction() {
+	    document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	//Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+	  if (!event.target.matches('.dropbtn')) {
+
+	    var dropdowns = document.getElementsByClassName("dropdown-content");
+	    var i;
+	    for (i = 0; i < dropdowns.length; i++) {
+	      var openDropdown = dropdowns[i];
+	      if (openDropdown.classList.contains('show')) {
+	        openDropdown.classList.remove('show');
+	      }
+	    }
+	  }
+	}
+
+	</script>
+	<script src="./checkout.js"></script>
+	<script src="./logout.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+	<script src="./movielist.js"></script>
+	<script src="./movielist_sort.js"></script>
+	<script src="./pagination.js"></script>
+	
+</body>
+</html>

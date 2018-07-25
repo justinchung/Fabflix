@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	In our XML parsing, we used two different optimization techniques.
+	(1) First we used HashMaps instead of Lists to reduce the amount of time it takes
+		to get the correct value we were searching for, instead of iterating the entire list.
+		One HashMap used the film's id as the key and a Movie class object as the value. The Second HashMap
+		used the film's id as the key and a StarInMoive class object as the value. The last HashMap used
+		the actor's name as the key and Actor class object as the value. Each class object stored information
+		regarding our databases' table attributes which were accessible by getter methods.
+		
+	(2) The second optimization was the use of batch insert. It decreased the time it takes to insert our
+		data. Without batch insert, you would have to insert records one row at a time and each time
+		opening and closing a database connection. With batch insert, we were able to insert multiple
+		records at once. We also used prepared statements so that we didn't have to recreate the query over
+		and over again.
+
+		Using these optimizations, we were able to significantly improve our programs runtime. 
+		Our runtime after our optimizations was around 10 seconds. This is minutes faster than running 
+		without any optimizations.
+</body>
+</html>

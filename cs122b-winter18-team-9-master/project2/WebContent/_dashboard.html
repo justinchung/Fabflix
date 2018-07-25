@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fabflix</title>
+</head>
+<body>
+	<h1>Welcome to the Employee Dashboard</h1>
+
+	<table id=metadata_table>
+		<thead>
+			<tr>
+				<th> Table Name </th>
+				<th> Attributes, types, and constraints </th>
+			</tr>
+		</thead>
+		<tbody id=metadata_table_body>
+		</tbody>
+	</table>
+
+	<h2>Insert a star</h2>
+	<form id="insert_star_form" method="post" action="#">
+		<label><b>Name</b></label>
+		<input type="text" name="name">
+		<br>
+		<label><b>Birth year</b></label>
+		<input type="text" name="birthyear">
+		<br>
+		
+		<input id="add_star" type="button" value="Add" onclick=addStarDashboard()>
+	</form>
+	
+	<h2>Add movie</h2>
+	<form id="add_movie_form" method="post" action="#">
+		<label><b>Title</b></label>
+		<input type="text name="title">
+		<br>
+		<label><b>Year</b></label>
+		<input type="text name="year">
+		<br>
+		<label><b>Director</b></label>
+		<input type="text name="director">
+		<br>
+		<label><b>Single star</b></label>
+		<input type="text name="star">
+		<br>
+		<label><b>Single genre</b></label>
+		<input type="text name="genre">
+		<br>
+		
+		<input id="add_movie" type="button" value="Add" onclick=addMovieDashBoard()>
+	</form>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="./dashboard.js"></script>
+	<script src="./addstar.js"></script>
+	<script src="./addmovie.js"></script>
+</body>
+</html>
